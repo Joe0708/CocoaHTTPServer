@@ -64,6 +64,9 @@
 	NSMutableArray *responseDataSizes;
 }
 
+@property (nonatomic, readonly) HTTPMessage *request;
+@property (nonatomic, readonly) GCDAsyncSocket *asyncSocket;
+
 - (id)initWithAsyncSocket:(GCDAsyncSocket *)newSocket configuration:(HTTPConfig *)aConfig;
 
 - (void)start;
