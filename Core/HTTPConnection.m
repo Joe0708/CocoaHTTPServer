@@ -96,6 +96,14 @@ static const int httpLogLevel = HTTP_LOG_LEVEL_WARN; // | HTTP_LOG_FLAG_TRACE;
 static dispatch_queue_t recentNonceQueue;
 static NSMutableArray *recentNonces;
 
+- (HTTPMessage *)request {
+    return request;
+}
+
+- (GCDAsyncSocket *)asyncSocket {
+    return asyncSocket;
+}
+
 /**
  * This method is automatically called (courtesy of Cocoa) before the first instantiation of this class.
  * We use it to initialize any static variables.
